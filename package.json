@@ -6,11 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel dev:*",
-        "dev:build:server": "webpack --config webpack.server.js --watch",
+    "dev:build:server": "webpack --config webpack.server.js --watch",
     "dev:build:client": "webpack --config webpack.client.js --watch",
     "dev:server": "nodemon --watch build --exec node build/bundle.js "
-
-  
   },
   "keywords": [
     "React",
@@ -33,9 +31,11 @@
     "concurrently": "3.5.0",
     "express": "4.15.4",
     "express-http-proxy": "1.0.6",
+    "fs": "^0.0.1-security",
     "lodash": "4.17.4",
     "nodemon": "1.12.0",
     "npm-run-all": "4.1.1",
+    "path": "^0.12.7",
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "react-helmet": "5.2.0",

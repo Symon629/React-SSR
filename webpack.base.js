@@ -1,3 +1,7 @@
+// since this is common in both the client and server we are moving it to this common file
+// and we will use webpack-merge to merge two config file
+
+
 module.exports = {
       // Tell webpack to run babel on every file it runs through
       module:{
