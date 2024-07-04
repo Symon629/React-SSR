@@ -1,13 +1,14 @@
-const express = require("express");
+import express from "express";
+// MOved some code to the renderer file
+import renderer from "./helpers/renderer";
 const app = express();
-const React = require('react');
-const renderToString = require("react-dom/server").renderToString;
-const Home = require('../client/components/Home');
 
-app.get("/",(req,res)=>{
+app.use(express.static('public'));
 
-    const content = renderToString(<Home/>);
-    res.send(content);    
+app.get("*",(req,res)=>{
+    //In order to handle jsx on the server side 
+    res.send(renderer(req))
+   
 })
 
 app.listen(3000,()=>{
